@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Dados a ser enviado:</h2>
+          </div>
+          <div class="modalBody">
+            <p id="data"></p>
+            <p id="sucess" style="display: none; color: forestgreen;">Cadastro realizado com sucesso!!</p>
+            <p id="error" style="display: none; color: crimson;">Erro ao realizar o cadastro, revise os campos.</p>
+          </div>
+          <div class="modal-footer">
+            <p style="padding: 10px 0px 10px 0px;">Deseja enviar?</p>
+            <button id="btnSend">Enviar</button>
+          </div>
+        </div>
+      
+      </div>
+
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Instituto_Federal_do_Paran%C3%A1_-_Marca_Horizontal_2015.svg/2560px-Instituto_Federal_do_Paran%C3%A1_-_Marca_Horizontal_2015.svg.png" alt="">
+    </header>
+    <main class="container">
+        <h1 class="title">Cadastro de Alunos</h1>
+        <div class="row">
+            <div class="inputbox">
+                <input type="text" id="nome" required>
+                <label for="nome">Nome <p class="required">*</p></label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="email"  required>
+                <label for="email" style="display: flex; ">Email <p class="required">*</p></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="inputbox" >
+                <input type="text" id="cep" required>
+                <label for="cep" >CEP <p class="required">*</p></label>
+                <p id="error" style="display: none; position: absolute; top: 40px; color: crimson;">CEP Inválido</p>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="endereco"  required>
+                <label for="endereco">Endereço <p class="required">*</p></label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="numero"  required>
+                <label for="numero">Número <p class="required">*</p></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="inputbox">
+                <input type="text" id="bairro"  required>
+                <label for="bairro">Bairro <p class="required">*</p></label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="cidade"  required>
+                <label for="cidade">Cidade <p class="required">*</p></label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="estado"  required>
+                <label for="estado">Estado <p class="required">*</p></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="inputbox">
+                <input type="text" id="ibge"  required>
+                <label for="ibge">IBGE <p class="required">*</p></label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="ddd"  required>
+                <label for="ddd">DDD <p class="required">*</p></label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="siafa"  required>
+                <label for="siafa">Siafa <p class="required">*</p></label>
+            </div>
+        </div>
+        <div class="row">
+            <div style="display: flex; flex-direction: column; margin-left: 150px;" >
+                <button id="save">Salvar</button>
+                <p style="display: none; color: crimson; margin-left: 30px;" id="fieldnull">Há campos vazio</p>
+            </div>
+            <button id="clean" >Limpar</button>
+        </div>
+    </main>
+    <footer>
+        Prof. Fernando &#169 2022
+    </footer>
+    <script src="consulta_cep.js" type='module' defer></script>
+
+</body>
+</html>
